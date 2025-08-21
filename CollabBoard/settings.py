@@ -15,9 +15,7 @@ STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
-    "collab-board-rywe.onrender.com",
+    "*",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
