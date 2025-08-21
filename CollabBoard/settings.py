@@ -2,10 +2,14 @@ import os
 from pathlib import Path
 from decouple import config
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+
+
 
 # SECURITY
 SECRET_KEY = config('SECRET_KEY')
