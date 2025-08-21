@@ -17,7 +17,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "collab-board.onrender.com",
+    "collab-board-rywe.onrender.com",
 ]
 
 # APPLICATIONS
