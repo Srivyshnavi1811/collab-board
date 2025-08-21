@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/collab.css' %}">
+  
+  <style>
+    body {
+      background: url("{% static 'images/coll.avif' %}") no-repeat center center fixed;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-hover-lg bg-cyan">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'landing' %}"><strong>CB</strong></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'myboards' %}">My Boards</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'boardview' %}">Board View</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'create_project' %}">Create New</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Section -->
+  <section class="main-section">
+    <div class="image-content col-md-6 mb-4">
+      <!-- You can insert an image here if needed -->
+    </div>
+    <div class="text-content col-md-14">
+      <h1>Collaborate</h1>
+      <h5 class="text-muted">Home Page</h5>
+      <p>CollabBoard is your space for brainstorming and building projects with your team.</p>
+      <a href="{% url 'login' %}" class="btn btn-primary">Log In</a>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="{% static 'js/collab.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

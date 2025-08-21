@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: url("{% static 'images/image.png' %}") no-repeat center center fixed;
+      background-size: cover;
+    }
+    .main-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 10%;
+    }
+    .text-content h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #000006;
+    }
+    .text-content p {
+      color: #020747;
+      max-width: 500px;
+    }
+    .text-content .btn {
+      margin-top: 20px;
+      margin-right: 10px;
+    }
+    .image-content img {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="main-section">
+    <div class="image-content col-md-6 mb-4">
+      <!-- Optional: you can insert an image here if needed -->
+    </div>
+    <div class="text-content col-md-4">
+      <h1>Welcome To</h1>
+      <h1>Collab Board</h1>
+      <h5 class="text-muted">Landing Page</h5>
+      <p>Start your journey with a smart board designed for seamless teamwork and productivity</p>
+      <a href="{% url 'home' %}" class="btn btn-outline-primary">Get Started</a>
+    </div>
+  </section>
+
+  <script src="{% static 'js/collab.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
