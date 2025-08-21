@@ -20,6 +20,10 @@ ALLOWED_HOSTS = [
     "collab-board-rywe.onrender.com",
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://collab-board-rywe.onrender.com"
+]
+
 # APPLICATIONS
 INSTALLED_APPS = [
     'django.contrib.admin',
